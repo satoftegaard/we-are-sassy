@@ -5,6 +5,9 @@
     "start": "webpack-dev-server",
     "build": "rm -rf public && NODE_ENV=production webpack --optimize-minimize --progress --profile --colors"
   },
+  "dependencies": {
+    "whatwg-fetch": "^2.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-core": "^6.18.2",
@@ -23,6 +26,7 @@
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^3.13.0",
     "postcss-loader": "^1.1.1",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
@@ -32,8 +36,5 @@
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^1.0.2",
     "webpack-validator": "^2.2.9"
-  },
-  "dependencies": {
-    "whatwg-fetch": "^2.0.1"
   }
 }

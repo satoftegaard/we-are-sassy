@@ -43,7 +43,7 @@ const common = {
       test: /\.(sass|s?css)$/,
       loaders: [
         'style',
-        'css?camelCase&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'css',
         'postcss',
         'sass'
       ]
@@ -73,7 +73,13 @@ const development = {
     new webpack.HotModuleReplacementPlugin({ multiStep: true }),
     new webpack.SourceMapDevToolPlugin(),
     new BrowserSyncPlugin({ proxy: 'http://localhost:8080/' }, { reload: false })
-  ]
+  ],
+  module: {
+    loaders: [{
+      test: /\.html$/,
+      loader: 'raw'
+    }]
+  }
 }
 
 const production = {

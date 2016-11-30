@@ -1,12 +1,67 @@
-@import 'utility'
+// @import 'utility'
+//
+$font-stack: Helvetica, sans-serif
+$primary-color: white
 
-$base-text-size: 16px
-$base-font-family: sans-serif
 
 html
   text-size-adjust: 100%
+  height: 100%
 
 body
-  @include font-smoothing(on)
-  margin: 0
-  font: $base-text-size / 1 $base-font-family
+  // @include font-smoothing(on)
+  // margin: 0
+  // font: $base-text-size / 1 $base-font-family
+  background-color: $primary-color
+  display: flex
+  align-content: flex-start
+
+header
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  margin-left: 20px
+
+  &.avatar
+    background-image: url(http://spiritual-quiet.surge.sh/me.JPG)
+    background-repeat: no-repeat
+
+    h1
+    font-family: $font-stack
+    font-size: 25px
+    color: black
+    padding-top: 150px
+
+section
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  margin-top: 500px
+
+  &.portfolio
+    // width: 100%
+    // height: auto
+    // background-color: black
+    flex-direction: row
+    display: flex
+
+    .project1
+      width: 250px
+      height: 700px
+      border: 4px solid white
+      background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/532fb838046247.5755fedea41fc.png)
+
+      &:hover
+        color: blue
+
+    .project2
+      width: 250px
+      height: 700px
+      border: 4px solid white
+      background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/3ae21332980863.56a2a4a62e6d1.jpg)
+
+    .project3
+      width: 250px
+      height: 700px
+      border: 4px solid white
+      background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/57f2fd22213439.5630e93232927.jpg)

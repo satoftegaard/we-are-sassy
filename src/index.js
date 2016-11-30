@@ -1,15 +1,13 @@
-import 'file!./index.html'
+import './index.html'
 import './styles/screen.sass'
 
-const main = () => {
-  document.getElementById('root').textContent = 'Hello, World!'
-}
+// const main = () => {
+//   document.querySelector('h1').textContent += ''
+// }
 
-document.addEventListener('DOMContentLoaded', main)
+// document.addEventListener('DOMContentLoaded', main)
 
 if (module.hot) {
-  module.hot.accept()
-  module.hot.accept('file!./index.html', () => {
-    window.location.reload()
-  })
+  module.hot.dispose(() => window.location.reload())
+  module.hot.accept(err => console.error(err))
 }
