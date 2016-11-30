@@ -1,5 +1,8 @@
 // @import 'utility'
 //
+@import url('https://fonts.googleapis.com/css?family=Arbutus Slab')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
 $font-stack: Helvetica, sans-serif
 $primary-color: white
 
@@ -10,11 +13,11 @@ html
 
 body
   // @include font-smoothing(on)
-  // margin: 0
   // font: $base-text-size / 1 $base-font-family
   background-color: $primary-color
-  display: flex
-  align-content: flex-start
+  // display: flex
+  flex-direction: row
+  min-height: 100%
 
 header
   display: flex
@@ -31,12 +34,13 @@ header
     font-size: 25px
     color: black
     padding-top: 150px
+    padding-right: 350px
 
 section
   display: flex
   flex-wrap: wrap
   flex-direction: row
-  margin-top: 500px
+  margin: 10px
 
   &.portfolio
     // width: 100%
@@ -48,7 +52,7 @@ section
     .project1
       width: 250px
       height: 700px
-      border: 4px solid white
+      border: 4px solid $primary-color
       background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/532fb838046247.5755fedea41fc.png)
 
       &:hover
@@ -57,11 +61,30 @@ section
     .project2
       width: 250px
       height: 700px
-      border: 4px solid white
+      border: 4px solid $primary-color
       background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/3ae21332980863.56a2a4a62e6d1.jpg)
 
     .project3
       width: 250px
       height: 700px
-      border: 4px solid white
+      border: 4px solid $primary-color
       background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/57f2fd22213439.5630e93232927.jpg)
+
+footer
+
+    &.icons
+    align-content:space-between
+    font-size: 30px
+
+    p
+    font-family: $font-stack
+    font-size: 12px
+    color: grey
+    padding-top: 150px
+    padding-left: 20px
+
+    &.heart
+      font-size: 8px
+      line-height: 15px
+      color: black
+      padding: 2px
